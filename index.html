@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- everything inside the html will be part of an Angular app -->
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ greeting }}</title>
+</head>
+<body>
+<!--<h1>Hello World</h1>-->
+<!--<p>{{1 + 6}}<p>-->
+<!--<div>-->
+<!--<p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>-->
+<!--<p>{{ greeting }} world!</p>-->
+<!--</div>-->
+
+<!--unit 2-->
+<input type="text" ng-model="name" placeholder="What is your name?">
+<!--ternary if/else-->
+<!--if true, do the first thing. else do the second thing-->
+<h1>My name is {{name?name:'enter name'}}</h1>
+
+<!--ng-init sets a default value but also dirties the model on load-->
+<!--<h1 ng-init="name='test' ">Hai my name is {{name}}</h1>-->
+
+<select ng-model="favAnimal">
+    <option value="Cats">Cats</option>
+    <option value="Dogs and Cats">Dogs and Cats</option>
+    <option value="Neither">Neither</option>
+</select>
+
+<h3>I love {{favAnimal}} <3 </h3>
+
+<!--unit 4-->
+{{3.14159265359 | number:3}}
+{{3.14159265359 | number:6}}
+{{3.14159265359 | number:1}}
+
+{{3.14159265359 | currency:"€"}}
+
+<h1>Please say something</h1>
+<input type="text" ng-model="quote">
+<h3>Yelling: {{quote | uppercase}}</h3>
+<h3>Whispering: {{quote | lowercase}}</h3>
+
+
+<h1>How many digits of pi do you want?</h1>
+<select ng-model="digitsOfPi">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+</select>
+<ng-pluralize count="digitsOfPi"
+              when="{'0': '',
+                     'one': '1 person is viewing.',
+                     'other': '{} people are viewing.'}">
+</ng-pluralize>
+
+<input type="text" ng-model="digitsOfPi">
+<h3>Here you go! the first {{digitsOfPi}} digits of pi!</h3>
+<h3>Whispering: {{quote | lowercase}}</h3>
+
+
+<!--npm i angular@1.5.8 -S-->
+<script src="node_modules/angular/angular.js"></script>
+</body>
+</html>
