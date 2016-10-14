@@ -7,19 +7,18 @@
 </head>
 <body>
 
-<h1>How many digits of pi do you want?</h1>
-<select ng-model="digitsOfPi">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-</select>
-<h3>Here you go! the first {{digitsOfPi}} digits of pi!</h3>
-<h3>{{3.14159265359| number:digitsOfPi}}</h3>
+<!--Angular templates will automatically update when our data changes.-->
+<div>
+    <p>Say something to the world
+    </p>
+    <!--ng-model is creating a new attribute that will bind the value of the text input to a property called "greeting". -->
+    <p>
+        <input type="text" ng-model="greeting">
+    </p>
+    <p>{{ greeting }} world!</p>
+</div>
 
+<!--npm install from terminal, using CDN can make program slower-->
 <!--npm i angular@1.5.8 -S-->
 <script src="node_modules/angular/angular.js"></script>
 </body>
