@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!-- everything inside the html will be part of an Angular app -->
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+</head>
+<body>
+
+<!--ng-model is creating a new attribute which will bind to the value of the input property "name" -->
+<input type="text" ng-model="name" placeholder="What is your name?">
+<!--ternary if/else-->
+<!--if true, do the first thing. else do the second thing-->
+<h1>My name is {{name?name:'enter name'}}</h1>
+
+<script src="node_modules/angular/angular.js"></script>
+</body>
+</html>
