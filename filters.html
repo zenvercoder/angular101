@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- everything inside the html will be part of an Angular app -->
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>filters</title>
+</head>
+<body>
+
+<!--Filters are bits of code that format data before displaying it-->
+<!--The syntax to use a filter is {{ expression | filter }}-->
+
+<div>
+    <h3>Round pi to 3 digits</h3>
+    {{3.14159265359 | number:3}}
+</div>
+
+<div>
+    <h3>Data rounded to two decimal places with a dollar sign prepended.</h3>
+    {{3.14159265359 | currency}}
+</div>
+
+<div>
+    <h3>Pi in Euros</h3>
+    {{3.14159265359 | currency:"€"}}
+</div>
+
+<div>
+        <!--Angular expressions are Javascript-like snippets that are usually placed in bindings like {{ expression }}-->
+
+    <h5>
+        Examples of Angular expressions:
+        1 + 2 = {{1 + 2}}
+        My name is {{"BoJack" + " Horseman"}}
+        The array [99,43,22] is {{ [99,43,22].length }} items long.
+    </h5>
+</div>
+
+<script src="node_modules/angular/angular.js"></script>
+</body>
+</html>
