@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- everything inside the html will be part of an Angular app -->
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ greeting }}</title>
+</head>
+<body>
+
+<h1>How many digits of pi do you want?</h1>
+<select ng-model="digitsOfPi">
+    <!--choosing an option will set the value for digitsOfPi-->
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+</select>
+
+<div>
+    <ng-pluralize count="digitsOfPi"
+
+                  when="{'1': 'Here is the first digit of pi {{digitsOfPi}} ',
+                     'other':'Here are the first {{digitsOfPi}} digits of pi'}">
+    </ng-pluralize>
+</div>
+<div>
+    {{3.14159265359 | number:digitsOfPi}}
+</div>
+
+<script src="node_modules/angular/angular.js"></script>
+</body>
+</html>
