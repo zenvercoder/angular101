@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- everything inside the html will be part of an Angular app -->
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ greeting }}</title>
+</head>
+<body>
+
+<h1>Super Useful Tip Calculator</h1>
+
+<h5>How much did your meal cost?</h5>
+
+<input type="text" ng-model="cost">
+
+<h5>How much do you want to tip?</h5>
+
+<select ng-model="tip">
+    <option value=".10">10%</option>
+    <option value=".15">15%</option>
+    <option value=".20">20%</option>
+</select>
+
+<h3>Subtotal: {{cost | currency}}</h3>
+
+<h3>Tip: {{cost * tip | currency}}</h3>
+
+<!--putting 1.0 first type coersions tip into a number-->
+<h3>Total: {{cost * (1.0 + tip) | currency}}</h3>
+
+<script src="node_modules/angular/angular.js"></script>
+</body>
+</html>
