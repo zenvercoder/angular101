@@ -3,6 +3,9 @@
 ## Unit 1
 
  0. [Intro and Setup](/Unit-1/01-intro-and-setup.md)
+ 
+ <!--npm install from terminal, using CDN can make program slower-->
+ `npm i angular@1.5.8 -S`
 
  * Angular is a clientside tech written in JavaScript used to make complex single-page apps quickly.
 
