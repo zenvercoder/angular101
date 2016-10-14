@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- everything inside the html will be part of an Angular app -->
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ favAnimal }}</title>
+</head>
+<body>
+
+<h1>What is your favorite animal?</h1>
+
+<!--When an item in the <select> menu is selected, the value of the selected option will be bound to the model identified by the ngModel directive. -->
+
+<select ng-model="favAnimal">
+    <option value="Cats">Cats</option>
+    <option value="Dogs">Dogs</option>
+    <option value="Dogs and Cats">Dogs and Cats</option>
+    <option value="Neither">Neither</option>
+</select>
+
+<h3>I love {{favAnimal}} <3 </h3>
+
+<script src="node_modules/angular/angular.js"></script>
+</body>
+</html>

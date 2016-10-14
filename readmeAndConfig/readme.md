@@ -6,6 +6,9 @@
  
  <!--npm install from terminal, using CDN can make program slower-->
  `npm i angular@1.5.8 -S`
+ 
+ <!--ng-init sets a default value but also dirties the model on load-->
+ `<h1 ng-init="name='test' ">Hai my name is {{name}}</h1>`
 
  * Angular is a clientside tech written in JavaScript used to make complex single-page apps quickly.
 
