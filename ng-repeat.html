@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>ng-repeat</title>
+</head>
+<body>
+
+<!--ng-repeat is like the Angular equivalent of a forEach-->
+
+<!--<ul ng-init="names=['Harry', 'Ron', 'Hermione', 'Sirius', 'Hedwig', 'Tonks']">-->
+    <!--<li ng-repeat='name in names'>-->
+        <!--{{name}}-->
+    <!--</li>-->
+<!--</ul>-->
+
+ <!--slightly different. More spaced out when ng-repeat is on ul-->
+<!--interesting... this ng-repeat can access the ng-init in the ul above-->
+<!--<ul ng-repeat='name in names'>-->
+    <!--<li>{{name}}</li>-->
+<!--</ul>-->
+
+<!--<ul ng-init="symbols=['Spades', 'Clubs', 'Hearts', 'Diamonds']">-->
+    <!--<li ng-repeat='symbol in symbols'>-->
+        <!--{{symbol}}-->
+    <!--</li>-->
+<!--</ul>-->
+
+<ul>
+    <li ng-repeat='number in [1,1,2,5,6,9,9,9] track by $index'>
+        {{number}}
+    </li>
+</ul>
+
+<script src="node_modules/angular/angular.js"></script>
+</body>
+</html>

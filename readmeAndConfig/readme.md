@@ -68,9 +68,21 @@ It is a module provided by default and contains the core components of AngularJS
         .controller("HelloController", function($scope) {`
  creates an angular module called myapp with no dependencies (empty brackets). You can chain functions after .controller
 
-
  0. [Expressions and Filters](/Unit-1/04-expressions-and-filters.md)
+ 
+ * Angular expressions are Javascript-like snippets that are usually placed in bindings like `{{ expression }}`
+ 
+ * Filters are bits of code that format data before displaying it. The syntax to use a filter is` {{ expression | filter }}`
+ 
  0. [Built-In Directives](/Unit-1/05-built-in-directives.md)
+ 
+ * ng-repeat will iterate over a collection and create a template for every item in the collection. Think of it as the Angular equivalent of a forEach
+ 
+ * Try using ng-repeat to iterate through an array with some duplicates, like [1,1,2,5,6,9,9,9]. What happens? Research how ng-repeat handles duplicate data and how to 'fix' this issue.
+ 
+ * Use 'track by' expression to specify unique keys
+ 
+ 
  0. [Intro to Controllers](/Unit-1/06-intro-to-controllers.md)
  0. [Scope](/Unit-1/07-intro-to-scope.md)
  0. [Angular Events](/Unit-1/08-intro-to-events.md)
