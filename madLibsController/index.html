@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- everything inside the html will be part of an Angular app -->
+<html lang="en" ng-app="madLibsApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Mad Libs w/ Controller</title>
+    <style type="text/css">
+        .form {
+            max-width: 400px;
+        }
+
+        .form input {
+            width: 100%;
+            line-height: 28px;
+            border-radius: 3px;
+        }
+
+        .form > div {
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form" ng-controller="MadLibsController">
+    <h3>Please fill out the following!</h3>
+    <div>
+        <div>
+            <label for="item1">Boy's Name</label>
+        </div>
+        <input placeholder="Enter a boy's name" type="text" id="item1" ng-model="boys_name">
+    </div>
+    <div>
+        <div>
+            <label for="item2">Adjective</label>
+        </div>
+        <input placeholder="Enter an adjective " type="text" id="item2" ng-model="adjective">
+    </div>
+    <div>
+        <div>
+            <label for="item3">Plural Noun</label>
+        </div>
+        <input placeholder="Enter a plural noun" type="text" id="item3" ng-model="plural_noun1">
+    </div>
+    <div>
+        <div>
+            <label for="item4">Plural Noun</label>
+        </div>
+        <input placeholder="Enter a plural noun" type="text" id="item4" ng-model="plural_noun2">
+    </div>
+    <div>
+        <div>
+            <label for="item5">An Insect, plural</label>
+        </div>
+        <input placeholder="Enter an insect" type="text" id="item5" ng-model="insects">
+    </div>
+    <div>
+        <div>
+            <label for="item6">Plural Noun</label>
+        </div>
+        <input placeholder="Enter a plural noun" type="text" id="item6" ng-model="plural_noun3">
+    </div>
+    <div>
+        <div>
+            <label for="item7">A verb ending in "s"</label>
+        </div>
+        <input placeholder="Enter a verb ending in s" type="text" id="item7" ng-model="s_verb">
+    </div>
+
+    <button ng-click="toggleShowLib()">Generate!</button>
+
+    <div ng-show="showLib">
+        <h4>I'm in love with <span>{{boys_name}}</span>. He's so <span>{{adjective}}</span>! He has big flat <span>{{plural_noun1}}</span>,
+            and when our
+            <span>{{plural_noun2}}</span>
+            meet, I get <span>{{insects}}</span> in my stomach. I've fallen for him like a ton of
+            <span>{{plural_noun3}}</span>, and he
+            <span>{{s_verb}}</span> for
+            me, too. But I think he's got another girlfriend. What should I do?</h4>
+
+        <button ng-click="toggleShowLib()">Play Again!</button>
+
+    </div>
+
+</div>
+
+
+<script src="../node_modules/angular/angular.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
+
+
