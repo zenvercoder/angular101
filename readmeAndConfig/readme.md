@@ -82,6 +82,8 @@ It is a module provided by default and contains the core components of AngularJS
  
  * Use 'track by' expression to specify unique keys
  
+ * Inspect an element that is hidden by ng-show/hide in the browser. What does Angular do to hide an element?Sets display to none
+ 
  
  0. [Intro to Controllers](/Unit-1/06-intro-to-controllers.md)
  0. [Scope](/Unit-1/07-intro-to-scope.md)

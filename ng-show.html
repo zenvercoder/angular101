@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+</head>
+<body>
+
+<!--ng-show and ng-hide will show or hide a specific HTML element based off of a provided expression-->
+
+<!--<div ng-show='3 + 4 == 5'>-->
+    <!--3 + 4 isn't 5, don't show-->
+<!--</div>-->
+
+<!--<div ng-show='3 + 4 == 7'>-->
+    <!--3 + 4 is 7, do show-->
+<!--</div>-->
+
+<!--<div ng-hide='3 + 4 == 5'>-->
+    <!--3 + 4 isn't 5, don't hide-->
+<!--</div>-->
+
+<!--<div ng-hide='3 + 4 == 7'>-->
+    <!--3 + 4 is 7, do hide-->
+<!--</div>-->
+
+<!--The element is hidden when the expression provided to ng-show attribute is false. ng-hide will hide an element when the expression given to ng-hide is true.-->
+
+<h1>Sign up page</h1>
+
+<input type="text" ng-model="password">
+
+<div ng-show="password.length > 0">
+    Your password is {{password.length}} characters
+</div>
+
+<div ng-show="password.length > 5">
+    <button>Sign Up!</button>
+</div>
+
+<div ng-hide="password.length > 5">
+    Password is invalid!
+</div>
+
+<script src="node_modules/angular/angular.js"></script>
+</body>
+</html>
