@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>ng-class</title>
+    <style type="text/css">
+        .valid {
+            color: green;
+        }
+        .invalid {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Sign up page</h1>
+
+<input type="text" ng-model="password">
+
+<!--here, ng-class is an object literal. The css class is the property and the value evaluates to true or false-->
+<div ng-show="password.length"
+     ng-class="{valid:password.length>=6,invalid:password.length<6}">
+    Your password is {{password.length}} characters
+</div>
+
+<div ng-show="password.length > 5">
+    <button>Sign Up!</button>
+</div>
+
+<div ng-hide="password.length > 5"
+     ng-class="invalid">
+    Password is invalid!
+</div>
+
+<script src="node_modules/angular/angular.js"></script>
+</body>
+</html>
