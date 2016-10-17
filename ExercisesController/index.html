@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="secondApp"  ng-cloak>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--ng-cloak so angular won't blink-->
+<div ng-controller="ExercisesController">
+    <h1>My favorite color is: {{FavColor}}</h1>
+    <input ng-model="FavColor" type="text" placeholder="What is your favorite color?">
+
+    <h1>Seconds in a century: </h1>
+    <h3>{{secondsInACentury | number}}</h3>
+
+    <h1>Time & Date right meow:</h1>
+    <h3>{{rightNow | date: 'EEEE, MMMM d, yyyy'}}</h3>
+
+</div>
+
+
+<script src="../node_modules/angular/angular.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
